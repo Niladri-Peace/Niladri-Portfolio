@@ -140,9 +140,9 @@ export const HeroContent = () => {
       {/* Right Side - Profile Photo */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 10 }}
         transition={{ duration: 0.5 }}
-        className="w-full md:w-1/3 flex justify-center relative md:ml-10"
+        className="w-full md:w-1/3 flex justify-center relative md:ml-10 mt-6 md:mt-12"
       >
         {/* Modern Geometric Background */}
         <div className="absolute -z-10 w-[350px] h-[350px] md:w-[420px] md:h-[420px] bg-transparent">
