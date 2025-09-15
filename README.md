@@ -2,7 +2,6 @@
 # 🌌 Niladri’s Portfolio
 
 [![Website](https://img.shields.io/badge/🌍%20Visit%20Live%20Portfolio-Click%20Here-brightgreen?style=for-the-badge&logo=vercel)](https://niladri-here.vercel.app/)  
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Source%20Code-blue?style=for-the-badge&logo=github)](https://github.com/Niladri-Peace/Niladri-Portfolio)
 
 ---
 
