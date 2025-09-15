@@ -47,10 +47,10 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 mt-16 md:mt-32 w-full z-[20]"
+      className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 mt-16 md:mt-32 w-full z-[20]"
     >
       {/* Left Side - Content */}
-      <div className="w-full md:w-2/3 flex flex-col gap-5 justify-center text-center md:text-left">
+      <div className="w-full md:w-2/3 flex flex-col gap-5 justify-center text-center md:text-left mt-10 md:mt-0">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -139,10 +139,10 @@ export const HeroContent = () => {
 
       {/* Right Side - Profile Photo */}
       <motion.div 
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full md:w-1/3 flex justify-center md:justify-end mt-8 md:mt-0 relative"
+        className="w-full md:w-1/3 flex justify-center relative md:ml-10"
       >
         {/* Animated Gradient Background */}
         <div className="absolute -z-10 w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 animate-[spin_15s_linear_infinite]">
