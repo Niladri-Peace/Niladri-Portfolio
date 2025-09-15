@@ -46,7 +46,7 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-20 mt-16 md:mt-40 w-full z-[20]"
+      className="flex flex-col items-center justify-center px-6 md:px-20 mt-16 md:mt-40 w-full z-[20]"
     >
       {/* Left Content */}
       <div className="w-full flex flex-col gap-5 justify-center m-auto text-center md:text-start">
@@ -55,9 +55,9 @@ export const HeroContent = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center md:items-start gap-4 mb-2"
+          className="flex flex-col items-center gap-4 mb-2 w-full text-center"
         >
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col items-center gap-2 md:gap-4">
             <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300">
               <Image
                 src="/logo-nb.png"
@@ -67,7 +67,7 @@ export const HeroContent = () => {
                 priority
               />
             </div>
-            <div>
+            <div className="text-center">
               <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Niladri Bhandari
               </h1>
