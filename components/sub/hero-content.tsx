@@ -49,25 +49,7 @@ export const HeroContent = () => {
       animate="visible"
       className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 mt-16 md:mt-32 w-full z-[20]"
     >
-      {/* Left Side - Profile Photo */}
-      <motion.div 
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="w-full md:w-1/3 flex justify-center md:justify-start"
-      >
-        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-4 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300">
-          <Image
-            src="/photo.jpeg"
-            alt="Niladri Bhandari"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      </motion.div>
-
-      {/* Right Side - Content */}
+      {/* Left Side - Content */}
       <div className="w-full md:w-2/3 flex flex-col gap-5 justify-center text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -154,6 +136,30 @@ export const HeroContent = () => {
         </motion.a>
 
       </div>
+
+      {/* Right Side - Profile Photo */}
+      <motion.div 
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full md:w-1/3 flex justify-center md:justify-end mt-8 md:mt-0 relative"
+      >
+        {/* Animated Gradient Background */}
+        <div className="absolute -z-10 w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 animate-[spin_15s_linear_infinite]">
+          <div className="absolute inset-4 bg-[#030014] rounded-full"></div>
+        </div>
+        
+        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-4 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300 group">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+          <Image
+            src="/photo.jpeg"
+            alt="Niladri Bhandari"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            priority
+          />
+        </div>
+      </motion.div>
 
     </motion.div>
   );
