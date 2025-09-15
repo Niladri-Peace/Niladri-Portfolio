@@ -144,13 +144,30 @@ export const HeroContent = () => {
         transition={{ duration: 0.5 }}
         className="w-full md:w-1/3 flex justify-center relative md:ml-10"
       >
-        {/* Animated Gradient Background */}
-        <div className="absolute -z-10 w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 animate-[spin_15s_linear_infinite]">
-          <div className="absolute inset-4 bg-[#030014] rounded-full"></div>
+        {/* Modern Geometric Background */}
+        <div className="absolute -z-10 w-[350px] h-[350px] md:w-[420px] md:h-[420px] bg-transparent">
+          {/* Decorative Elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute w-48 h-48 bg-purple-500/10 rounded-full -top-20 -left-20 mix-blend-screen"></div>
+            <div className="absolute w-32 h-32 bg-cyan-500/10 rounded-full bottom-10 -right-10 mix-blend-screen"></div>
+            <div className="absolute w-24 h-24 bg-indigo-500/10 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-screen"></div>
+            
+            {/* Animated Grid */}
+            <div className="absolute inset-0 opacity-20">
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className="absolute w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent" 
+                  style={{top: `${(i + 1) * 20}%`}}></div>
+              ))}
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent" 
+                  style={{left: `${(i + 1) * 20}%`}}></div>
+              ))}
+            </div>
+          </div>
         </div>
         
-        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-4 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300 group">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-cyan-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-4 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300 group backdrop-blur-sm">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/30 via-transparent to-cyan-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
           <Image
             src="/photo.jpeg"
             alt="Niladri Bhandari"
@@ -158,6 +175,23 @@ export const HeroContent = () => {
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             priority
           />
+          {/* Floating particles effect */}
+          <div className="absolute inset-0 overflow-hidden rounded-full">
+            {[...Array(15)].map((_, i) => (
+              <div 
+                key={i}
+                className="absolute rounded-full bg-white/30"
+                style={{
+                  width: `${Math.random() * 6 + 2}px`,
+                  height: `${Math.random() * 6 + 2}px`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animation: `float ${Math.random() * 10 + 5}s linear infinite`,
+                  animationDelay: `-${Math.random() * 5}s`
+                }}
+              />
+            ))}
+          </div>
         </div>
       </motion.div>
 
