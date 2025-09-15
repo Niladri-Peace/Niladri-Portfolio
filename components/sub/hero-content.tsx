@@ -47,10 +47,28 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 sm:px-6 md:px-20 mt-12 sm:mt-16 md:mt-32 w-full z-[20] gap-8 md:gap-12"
+      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 mt-16 md:mt-32 w-full z-[20]"
     >
-      {/* Left Side - Content */}
-      <div className="w-full md:pl-0 md:w-1/2 flex flex-col gap-4 sm:gap-5 justify-center text-left">
+      {/* Left Side - Profile Photo */}
+      <motion.div 
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full md:w-1/3 flex justify-center md:justify-start"
+      >
+        <div className="relative w-[250px] h-[250px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border-4 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300">
+          <Image
+            src="/photo.jpeg"
+            alt="Niladri Bhandari"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </motion.div>
+
+      {/* Right Side - Content */}
+      <div className="w-full md:w-2/3 flex flex-col gap-5 justify-center text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -137,40 +155,6 @@ export const HeroContent = () => {
 
       </div>
 
-      {/* Right Side - Hero Image */}
-      <motion.div
-        variants={slideInFromRight(0.8)}
-        className="w-full md:w-1/2 flex justify-center items-center relative"
-      >
-        <div className="relative w-full max-w-[500px]">
-          {/* Background design */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <Image
-              src="/hero-bg.svg"
-              alt="work icons"
-              width={500}
-              height={500}
-              draggable={false}
-              className="w-full h-auto max-w-full select-none drop-shadow-lg"
-              priority
-            />
-          </div>
-          
-          {/* Profile photo */}
-          <div className="relative z-10 flex justify-center">
-            <div className="relative rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-purple-500 to-cyan-500 p-0.5">
-              <Image
-                src="/photo.jpeg"
-                alt="Niladri Bhandari"
-                width={300}
-                height={300}
-                className="rounded-full object-cover w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px]"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </motion.div>
     </motion.div>
   );
 };
