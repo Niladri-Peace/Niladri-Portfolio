@@ -4,13 +4,13 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from "@/lib/motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export const HeroContent = () => {
   const [currentText, setCurrentText] = useState('');
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const roles = ['Tech Enthusiast', 'AI Passionate', 'Full Stack Developer'];
+  const roles = useMemo(() => ['Tech Enthusiast', 'AI Passionate', 'Full Stack Developer'], []);
   const typingSpeed = 100; // ms per character
   const deletingSpeed = 50; // ms per character when deleting
   const delayBetweenRoles = 2000; // ms before starting next role

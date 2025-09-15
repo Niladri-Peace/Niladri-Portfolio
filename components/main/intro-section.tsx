@@ -18,7 +18,7 @@ export const IntroSection = () => {
           </h2>
           <p className="text-lg md:text-xl text-gray-300 mb-8">
             I create seamless web applications with a focus on performance, accessibility, and user experience.
-            Let's build something amazing together.
+            Let&apos;s build something amazing together.
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">

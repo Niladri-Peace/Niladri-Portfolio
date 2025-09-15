@@ -64,10 +64,10 @@ export const Contact = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold text-white mb-6">Let's work together!</h3>
+          <h3 className="text-2xl font-semibold text-white mb-6">Let&apos;s work together!</h3>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, 
-            I'll get back to you as soon as possible!
+            I&apos;m currently looking for new opportunities. Whether you have a question or just want to say hi, 
+            I&apos;ll get back to you as soon as possible!
           </p>
           <a 
             href="mailto:niladribhandari2002@gmail.com"
