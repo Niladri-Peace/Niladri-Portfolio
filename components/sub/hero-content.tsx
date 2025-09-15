@@ -58,7 +58,7 @@ export const HeroContent = () => {
           className="flex flex-col gap-4 mb-2 w-full"
         >
           <div className="flex items-center gap-4">
-            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300 flex-shrink-0">
+            <div className="hidden md:block relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300 flex-shrink-0">
               <Image
                 src="/logo-nb.png"
                 alt="Niladri Bhandari"
