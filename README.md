@@ -45,9 +45,11 @@ I specialize in **Next.js, Tailwind, AI/ML, and Cloud** technologies — always 
 
 ---
 
-## 🖼️ Live Demo
+## 🖼️ Demo & Screenshots
 
-🔗 [**View Portfolio**](https://niladri-here.vercel.app/)  
+🔗 [**Live Site**](https://niladri-here.vercel.app/)
+
+<img width="1883" height="885" alt="image" src="https://github.com/user-attachments/assets/ebf6874d-9109-4730-bdbc-0498880f3057" />
 
 ---
 
@@ -60,71 +62,6 @@ I specialize in **Next.js, Tailwind, AI/ML, and Cloud** technologies — always 
 - 🎨 Clean & modern UI with Tailwind CSS  
 
 ---
-
-
-## 🧑‍💻 Highlighted Projects
-
-* 🌿 **Eco-Lifestyle Agent AI** → AI-powered eco recommendations
-* 🎭 **Comic Crafter AI** → AI-generated comic stories & art
-* ⚕️ **Healthcare Website** → Medical equipment supply platform
-* 🤖 **WhatsApp-Drive Assistant** → Automating Google Drive via chat
-* 🌐 **Networking Simulation Tool** → Network topology & optimization
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Niladri-Peace&show_icons=true&theme=tokyonight" alt="Niladri's GitHub stats" height="150" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Niladri-Peace&theme=tokyonight" alt="GitHub Streak" height="150" />
-</p>
-
----
-
-## 🌱 Contribution Graph
-
-![Niladri's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Niladri-Peace\&theme=react-dark\&hide_border=true)
-
-
-
-# 🌌 Niladri’s Portfolio
-
-[![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge&logo=vercel)](https://niladri-here.vercel.app/)  
-
----
-
-## 👋 About Me
-
-Hey there! I’m **Niladri Bhandari**, a passionate **Web Developer & AI Enthusiast**.  
-I love transforming **ideas into seamless digital experiences**, blending **AI, Cloud, and Full-Stack Development** to create impactful projects.  
-
-This portfolio showcases my journey, projects, and skills — built with ❤️ and modern web technologies.
-
----
-
-## ⚡ Tech Stack
-
-| **Category**     | **Technologies** |
-|------------------|------------------|
-| 🌐 Frontend      | Next.js, React.js, Tailwind CSS |
-| 🛠 Backend       | Node.js, Express.js |
-| ☁️ Cloud & Tools | Vercel, AWS (exploring), Docker (exploring) |
-| 🤖 AI & ML       | Python, TensorFlow.js, Flask |
-| 🗄 Database      | MySQL, MongoDB |
-| 📦 Others        | Git, TypeScript, PostCSS, ESLint |
-
----
-
-## 🎨 Features
-
-✨ Fully responsive (works on all devices)  
-✨ Modern UI/UX with smooth design aesthetics  
-✨ Interactive project showcase  
-✨ Fast ⚡ optimized performance  
-✨ Deployed on **Vercel** with CI/CD integration  
-
----
-
 ## 📂 Project Structure
 
 ```bash
@@ -143,25 +80,22 @@ Niladri-Portfolio
  ┣ 📜 .eslintrc.json
  ┣ 📜 README.md
 ````
+---
+
+## 🧑‍💻 Highlighted Projects
+
+* 🌿 **Eco-Lifestyle Agent AI** → AI-powered eco recommendations
+* 🎭 **Comic Crafter AI** → AI-generated comic stories & art
+* ⚕️ **Healthcare Website** → Medical equipment supply platform
 
 ---
 
-## 🖼️ Demo & Screenshots
+## 📊 GitHub Stats
 
-🔗 [**Live Site**](https://niladri-here.vercel.app/)
-
-<img width="1883" height="885" alt="image" src="https://github.com/user-attachments/assets/ebf6874d-9109-4730-bdbc-0498880f3057" />
-
-
----
-
-## 🧑‍💻 Projects Highlighted in Portfolio
-
-* **🌿 Eco-Lifestyle Agent** → AI agent recommending eco-friendly lifestyle changes
-* **🎭 Comic Crafter AI** → Generates AI-powered comic backstories & scenes
-* **⚕️ Healthcare Website** → Medical equipment supply platform (HTML, CSS, PHP, MySQL)
-* **🤖 WhatsApp-Drive Assistant** → Manage Google Drive via WhatsApp commands
-* **🌐 Network Simulation Tool** → Automated topology generation & traffic analysis
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Niladri-Peace&show_icons=true&theme=tokyonight" alt="Niladri's GitHub stats" height="150" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Niladri-Peace&theme=tokyonight" alt="GitHub Streak" height="150" />
+</p>
 
 ---
 
