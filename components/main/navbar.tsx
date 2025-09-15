@@ -129,27 +129,29 @@ export const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed top-0 right-0 w-3/4 sm:w-1/2 h-screen bg-[#030014]/80 backdrop-blur-lg shadow-lg flex flex-col items-center justify-center text-gray-300 md:hidden"
           >
-            {/* Close Button */}
-            <button
-              className="absolute top-5 right-6 text-white text-3xl"
-              onClick={closeMenu}
-            >
-              ✖
-            </button>
-
-            {/* Logo in Mobile Menu */}
-            <div className="flex items-center gap-2 mb-10">
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                width={50}
-                height={50}
-                draggable={false}
-                className="cursor-pointer"
-              />
-              <span className="text-white font-bold text-xl">
-                I am Niladri | Phoenix
-              </span>
+            <div className="w-full flex items-center justify-between px-6 py-4">
+              {/* Logo and Text */}
+              <div className="flex items-center gap-2">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300">
+                  <Image
+                    src="/logo-nb.png"
+                    alt="Niladri Bhandari"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <span className="text-white font-bold text-lg whitespace-nowrap">
+                  I am Niladri | Phoenix
+                </span>
+              </div>
+              
+              {/* Close Button */}
+              <button
+                className="text-white text-2xl"
+                onClick={closeMenu}
+              >
+                ✖
+              </button>
             </div>
 
             {/* Mobile Links */}
