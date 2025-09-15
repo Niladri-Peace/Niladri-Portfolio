@@ -25,7 +25,36 @@ export const Skills = () => {
     >
       <SkillText />
 
-      <div className="w-full">
+      <div className="w-full max-w-6xl mx-auto">
+        {/* First row - 8 skills */}
+        <div className="flex flex-row justify-center flex-wrap gap-5 items-center mb-5">
+          {[
+            ...(FRONTEND_SKILL as unknown as SkillType[]),
+            ...(BACKEND_SKILL as unknown as SkillType[]),
+            ...(OTHER_SKILL as unknown as SkillType[]),
+            ...(FULLSTACK_SKILL as unknown as SkillType[])
+          ]
+          .filter((skill, index, self) => 
+            index === self.findIndex(s => s.skill_name === skill.skill_name)
+          )
+          .slice(0, 8)
+          .map((skill, i) => {
+            // All skills including GitHub will use SkillDataProvider for consistent animation
+            return (
+              <SkillDataProvider
+                key={skill.skill_name}
+                src={skill.image}
+                name={skill.skill_name}
+                width={skill.width}
+                height={skill.height}
+                index={i}
+                icon={skill.skill_name === 'GitHub' ? <FaGithub className="w-16 h-16 text-white" /> : undefined}
+              />
+            );
+          })}
+        </div>
+
+        {/* Second row - 5 skills */}
         <div className="flex flex-row justify-center flex-wrap gap-5 items-center">
           {[
             ...(FRONTEND_SKILL as unknown as SkillType[]),
@@ -36,18 +65,9 @@ export const Skills = () => {
           .filter((skill, index, self) => 
             index === self.findIndex(s => s.skill_name === skill.skill_name)
           )
+          .slice(8, 13)
           .map((skill, i) => {
-            // If icon is provided, use it, otherwise render the image
-            if ('icon' in skill && skill.icon === 'github') {
-              return (
-                <div key={skill.skill_name} className="flex flex-col items-center">
-                  <div className="w-20 h-20 flex items-center justify-center">
-                    <FaGithub className="w-16 h-16 text-white" />
-                  </div>
-                  <span className="text-white text-sm mt-2">{skill.skill_name}</span>
-                </div>
-              );
-            }
+            // All skills including GitHub will use SkillDataProvider for consistent animation
             return (
               <SkillDataProvider
                 key={skill.skill_name}
@@ -55,7 +75,8 @@ export const Skills = () => {
                 name={skill.skill_name}
                 width={skill.width}
                 height={skill.height}
-                index={i}
+                index={i + 8} // Offset index for proper animation
+                icon={skill.skill_name === 'GitHub' ? <FaGithub className="w-16 h-16 text-white" /> : undefined}
               />
             );
           })}

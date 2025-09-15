@@ -13,12 +13,15 @@ export const Navbar = () => {
     if (href.startsWith('#')) {
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        setIsMobileMenuOpen(false);
+        window.scrollTo({
+          top: element.getBoundingClientRect().top + window.pageYOffset - 80, // Offset for fixed header
+          behavior: 'smooth'
+        });
       }
     } else {
-      window.open(href, '_blank');
+      window.location.href = href;
     }
+    closeMenu();
   };
 
   const closeMenu = () => setIsMobileMenuOpen(false);
@@ -50,14 +53,15 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center">
           <div className="bg-[rgba(3,0,20,0.37)] px-8 py-2 rounded-full border border-[rgba(112,66,248,0.38)] text-gray-200">
             {NAV_LINKS.map((link) => (
-              <a 
+              <Link 
                 key={link.title} 
-                href={link.link} 
+                href={link.link}
                 className="hover:text-[rgb(112,66,248)] transition font-medium cursor-pointer mx-4"
                 onClick={(e) => handleNavigation(e, link.link)}
+                scroll={false}
               >
                 {link.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -151,14 +155,15 @@ export const Navbar = () => {
             {/* Mobile Links */}
             <div className="flex flex-col items-center space-y-8 text-lg font-medium w-full px-6">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.title}
                   href={link.link}
                   className="w-full text-center py-3 hover:bg-[#2A0E61]/50 rounded-lg transition-colors"
                   onClick={(e) => handleNavigation(e, link.link)}
+                  scroll={false}
                 >
                   {link.title}
-                </a>
+                </Link>
               ))}
               
               {/* Mobile Resume Button */}

@@ -10,7 +10,7 @@
   },
   "author": {
     "name": "Niladri Bhandari",
-    "email": "niladribhandari2002@gmail.com",
+    "email": "iniladri1408@gmail.com",
     "url": "https://github.com/Niladri-Peace"
   },
   "description": "Welcome to Niladri Bhandari's personal portfolio built with Next.js 14 and Three.js",
@@ -48,11 +48,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Niladri-Peace/nil-here.git"
+    "url": "https://github.com/Niladri-Peace/Niladri-Portfolio.git"
   },
-  "homepage": "https://github.com/Niladri-Peace/nil-here#readme",
+  "homepage": "https://github.com/Niladri-Peace/Niladri-Portfolio#readme",
   "bugs": {
-    "url": "https://github.com/Niladri-Peace/nil-here/issues"
+    "url": "https://github.com/Niladri-Peace/Niladri-Portfolio/issues"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",

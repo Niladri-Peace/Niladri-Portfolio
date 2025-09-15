@@ -70,7 +70,7 @@ export const Contact = () => {
             I&apos;ll get back to you as soon as possible!
           </p>
           <a 
-            href="mailto:niladribhandari2002@gmail.com"
+            href="mailto:iniladri1408@gmail.com"
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full hover:opacity-90 transition-all duration-300 font-medium"
           >
             <FaEnvelope className="mr-2" />

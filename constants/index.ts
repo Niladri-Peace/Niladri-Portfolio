@@ -102,7 +102,7 @@ export const SOCIALS = [
   {
     name: "Instagram",
     icon: RxInstagramLogo,
-    link: "https://www.instagram.com/yourusername", // Update with your Instagram handle
+    link: "https://www.instagram.com/niladri_bhandari",
   },
   {
     name: "Facebook",
@@ -271,7 +271,7 @@ export const FOOTER_DATA = [
       {
         name: "Instagram",
         icon: RxInstagramLogo,
-        link: "https://www.instagram.com/yourusername",
+        link: "https://www.instagram.com/niladri_bhandari",
       },
       {
         name: "Facebook",
@@ -287,7 +287,7 @@ export const FOOTER_DATA = [
       {
         name: "Email Me",
         icon: null,
-        link: "mailto:your.email@example.com",
+        link: "mailto:iniladri1408@gmail.com",
       },
       {
         name: "Resume",
@@ -309,6 +309,10 @@ export const NAV_LINKS = [
   {
     title: "Projects",
     link: "#projects",
+  },
+  {
+    title: "Contact",
+    link: "#contact",
   },
 ] as const;
 

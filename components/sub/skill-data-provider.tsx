@@ -30,7 +30,7 @@ export const SkillDataProvider = ({
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.1;
+  const animationDelay = 0.2;
 
   return (
     <motion.div
