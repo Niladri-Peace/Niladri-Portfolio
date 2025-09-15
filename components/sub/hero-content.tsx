@@ -47,18 +47,18 @@ export const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col items-center justify-center px-6 md:px-20 mt-16 md:mt-40 w-full z-[20] gap-8"
+      className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 sm:px-6 md:px-20 mt-12 sm:mt-16 md:mt-32 w-full z-[20] gap-8 md:gap-12"
     >
-      {/* Content */}
-      <div className="w-full flex flex-col gap-5 justify-center items-center m-auto text-center">
+      {/* Left Side - Content */}
+      <div className="w-full md:pl-0 md:w-1/2 flex flex-col gap-4 sm:gap-5 justify-center text-left">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col gap-4 mb-2 w-full items-center"
+          className="flex flex-col gap-4 mb-2 w-full"
         >
-          <div className="flex flex-col items-center gap-4">
-            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300">
+          <div className="flex items-center gap-4">
+            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300 flex-shrink-0">
               <Image
                 src="/logo-nb.png"
                 alt="Niladri Bhandari"
@@ -67,7 +67,7 @@ export const HeroContent = () => {
                 priority
               />
             </div>
-            <div className="text-center">
+            <div className="text-left">
               <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Niladri Bhandari
               </h1>
@@ -137,21 +137,38 @@ export const HeroContent = () => {
 
       </div>
 
-      {/* Hero Image */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="w-full flex justify-center items-center mt-4"
+      {/* Right Side - Hero Image */}
+      <motion.div
+        variants={slideInFromRight(0.8)}
+        className="w-full md:w-1/2 flex justify-center items-center relative"
       >
-        <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-4 border-[#7042f88b] hover:border-cyan-400 transition-all duration-300">
-          <Image
-            src="/photo.jpeg"
-            alt="Your Name"
-            fill
-            className="object-cover"
-            priority
-          />
+        <div className="relative w-full max-w-[500px]">
+          {/* Background design */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <Image
+              src="/hero-bg.svg"
+              alt="work icons"
+              width={500}
+              height={500}
+              draggable={false}
+              className="w-full h-auto max-w-full select-none drop-shadow-lg"
+              priority
+            />
+          </div>
+          
+          {/* Profile photo */}
+          <div className="relative z-10 flex justify-center">
+            <div className="relative rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-purple-500 to-cyan-500 p-0.5">
+              <Image
+                src="/photo.jpeg"
+                alt="Niladri Bhandari"
+                width={300}
+                height={300}
+                className="rounded-full object-cover w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[280px] md:h-[280px]"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </motion.div>
     </motion.div>
